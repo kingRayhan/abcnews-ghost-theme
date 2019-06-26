@@ -1,0 +1,27 @@
+<div class="card post-card">
+  <div class="thumbnail">
+  	<div class="overlay"></div>
+    <img class="card-img-top" src="{{ feature_image }}" alt="{{ title }}">
+    <div class="tags">
+      {{#foreach tags}}
+      <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}"># {{name}}</a>
+      {{/foreach}}
+    </div>
+  </div>
+  <div class="card-body d-flex">
+    <div class="counter">
+      <h1 class="counter-number"></h1>
+    </div>
+    <div class="content">
+      <h4 class="card-title">
+        <a href="{{permalink}}">
+          {{ title }}
+        </a>
+      </h4>
+      <p class="card-text">
+        {{excerpt}}
+        <i class="fa fa-play"></i>
+      </p>
+    </div>
+  </div>
+</div>

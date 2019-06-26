@@ -1,0 +1,74 @@
+<div class="header-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-between align-items-center header-area-flex-wrapper">
+                <div class="logo">
+                    <h3 class="mb-0">
+                        <a class="text-uppercase d-flex align-items-center" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img class="mr-3" style="width: 40px;" src="{{@site.logo}}" alt="{{@site.title}}">
+                            {{/if}}
+                            {{@site.title}}
+                        </a>
+                    </h3>
+                </div>
+
+                {{#tag}}
+                <div class="selected-tag">
+                    <h3 class="tag-name mb-0 text-uppercase">{{name}}</h3>
+                </div>
+                {{/tag}}
+
+                <div class="menu">
+                    <div class="ham-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="header-panel">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4">
+                <div class="search">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Type for search" 
+                        class="form-control">
+                </div>
+                <div class="tags">
+                    {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                        {{#foreach tags}}
+                            <a href="{{ url }}"># {{ name }}</a>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="navigation">
+                    {{navigation}}
+                </div>
+                <div class="language float-right mt-3">
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-result d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="search-result-wrapper"></div>
+        </div>
+    </div>
+</div>

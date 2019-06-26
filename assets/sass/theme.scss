@@ -1,0 +1,41 @@
+body,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'post-card';
+
+.loadmore {
+    text-align: center;
+    padding: 65px 0;
+
+    a {
+        color: $dark;
+        display: inline-block;
+        font-size: 16px;
+        transition: 500ms;
+        position: relative;
+        bottom: 0;
+        i {
+            display: block;
+            font-size: 45px;
+            margin-top: -8px;
+        }
+        &:hover {
+            bottom: -10px;
+        }
+    }
+}
+
+.goog-te-gadget {
+    color: #fff !important;
+}

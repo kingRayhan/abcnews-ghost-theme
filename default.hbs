@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{@site.lang}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ asset 'bootstrap/bootstrap.css' }}">
+    <link rel="stylesheet" href="{{ asset 'css/theme.css' }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <title>{{ meta_title }}</title>
+    
+    {{ ghost_head }}
+  </head>
+  <body class="{{body_class}}">
+     {{> "header"}}
+     {{{body}}}
+     {{> "footer"}}
+
+     {{ ghost_foot }}
+     {{{block "scripts"}}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{{ asset 'bootstrap/popper.js' }}"></script>
+  <script src="{{ asset 'bootstrap/bootstrap.js' }}"></script>
+  <script src="{{ asset 'js/masonry.js' }}"></script>
+  <script src="{{ asset 'js/ghost-search.js' }}"></script>
+  <script src="{{ asset 'js/theme.js' }}"></script>
+  <script src="{{ asset 'js/translate.js' }}"></script>
+  <script>
+    var homeUrl = "{{ @site.url }}"
+    var pagination_next_page_number = '{{ pagination.next }}',
+        pagination_available_pages_number = '{{ pagination.pages }}';
+
+
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

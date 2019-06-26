@@ -1,0 +1,20 @@
+{{!< default}}
+
+<div class="container-fluid">
+	<div class="row py-5">
+		<div class="col-md-12">
+			<div id="grid" class="post-loop d-flex flex-wrap">
+				{{!-- <div id="grid-sizer"></div> --}}
+				{{#foreach posts}}
+					{{> "post-card"}}
+				{{/foreach}}
+			</div>
+			<div class="loadmore">
+				<a href="javascript:void(0)" class="load-more-posts">
+					LOAD MORE 
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

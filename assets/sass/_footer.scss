@@ -1,0 +1,46 @@
+.footer-area {
+    background-color: $dark;
+    padding: 25px 0;
+}
+
+.subscribe-form {
+    input {
+        margin: 0 8px;
+    }
+    button {
+        background-color: transparent;
+        font-weight: 400;
+        color: #fff;
+        border-radius: 5px;
+    }
+}
+
+.social-icons {
+    a {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+}
+
+.footer-links {
+    margin-top: 25px;
+
+    a {
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: #fff;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
